@@ -14,5 +14,10 @@ namespace SIDE
         /// Пользователи
         /// </summary>
         public DbSet<User> Users { get; set; }
+
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        {
+            optionsBuilder.UseNpgsql("Host=localhost;Port=5432;Database=side;Username=postgres;Password=postgres");
+        }
     }
 }
