@@ -15,11 +15,16 @@ namespace SIDE.Configure
 
             builder.Property(x => x.Id).HasComment("Идентификатор пользователя").UseIdentityByDefaultColumn();
 
-            builder.Property(x => x.CharacterName).HasComment("Наименование персонажа в игре");
             builder.Property(x => x.Email).HasComment("Электронная почта");
             builder.Property(x => x.FirstName).HasComment("Имя");
             builder.Property(x => x.Login).HasComment("Логин");
             builder.Property(x => x.PassHash).HasComment("Хеш пароля");
+
+            builder
+                .HasMany(x => x.Characters)
+                .WithOne()
+                .OnDelete(DeleteBehavior.Restrict)
+                .HasForeignKey(x => x.UserId);
         }
     }
 }

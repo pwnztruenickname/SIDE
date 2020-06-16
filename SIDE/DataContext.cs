@@ -3,7 +3,7 @@ using SIDE.Model;
 
 namespace SIDE
 {
-    public abstract class DataContext: DbContext
+    public class DataContext: DbContext
     {
         public DataContext(DbContextOptions<DataContext> options)
             : base(options)
@@ -15,9 +15,19 @@ namespace SIDE
         /// </summary>
         public DbSet<User> Users { get; set; }
 
-        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-        {
-            optionsBuilder.UseNpgsql("Host=localhost;Port=5432;Database=side;Username=postgres;Password=postgres");
-        }
+        /// <summary>
+        /// Персонажи
+        /// </summary>
+        public DbSet<Character> Characters { get; set; }
+
+        /// <summary>
+        /// Промежуточная таблица для <see cref="Class"/> и <see cref="Character"/>
+        /// </summary>
+        public DbSet<CharacterClass> CharacterClasses { get; set; }
+
+        /// <summary>
+        /// Пользователи
+        /// </summary>
+        public DbSet<Class> Classes { get; set; }
     }
 }

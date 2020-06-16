@@ -1,4 +1,6 @@
-﻿namespace SIDE.Model
+﻿using System.Collections.Generic;
+
+namespace SIDE.Model
 {
     /// <summary>
     /// Пользователь
@@ -16,11 +18,6 @@
         public string FirstName { get; set; }
 
         /// <summary>
-        /// Имя персонажа в игре
-        /// </summary>
-        public string CharacterName { get; set; }
-
-        /// <summary>
         /// Логин
         /// </summary>
         public string Login { get; set; }
@@ -34,5 +31,10 @@
         /// Электронная почта пользователя
         /// </summary>
         public string Email { get; set; }
+
+        /// <summary>
+        /// Персонажи пользователя
+        /// </summary>
+        public ICollection<Character> Characters { get; set; }
     }
 }
