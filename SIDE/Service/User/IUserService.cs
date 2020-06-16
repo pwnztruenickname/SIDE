@@ -6,6 +6,8 @@ namespace SIDE.Service.user
 {
     public interface IUserService
     {
-        Task<IEnumerable<User>> GetAll();
+        Task<IEnumerable<Character>> GetUserCharacters(long id);
+
+        Task<User> GetCurrentUser(long id);
     }
 }

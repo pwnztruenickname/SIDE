@@ -3,6 +3,7 @@ using System.Threading.Tasks;
 using AutoMapper;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using SIDE.Dto.Characters;
 using SIDE.Dto.Users;
 using SIDE.Service.user;
 
@@ -21,13 +22,13 @@ namespace SIDE.Controller
             _mapper = mapper;
         }
 
-        [HttpGet]
-        [ProducesResponseType(typeof(Task<IEnumerable<UserDto>>), StatusCodes.Status200OK)]
-        public async Task<IEnumerable<UserDto>> GetAll()
+        [HttpGet("{id}")]
+        [ProducesResponseType(typeof(Task<IEnumerable<CharacterDto>>), StatusCodes.Status200OK)]
+        public async Task<IEnumerable<CharacterDto>> GetUserCharacters(long id)
         {
-            var users = await _userService.GetAll();
+            var characters = await _userService.GetUserCharacters(id);
 
-            var dtos = _mapper.Map<IEnumerable<UserDto>>(users);
+            var dtos = _mapper.Map<IEnumerable<CharacterDto>>(characters);
 
             return dtos;
         }

@@ -4,9 +4,9 @@ using SIDE.Model;
 
 namespace SIDE.MappingProfile
 {
-    public class UsersDtoMappingProfile : Profile
+    public class UserDtosMappingProfile : Profile
     {
-        public UsersDtoMappingProfile()
+        public UserDtosMappingProfile()
         {
             CreateMap<User, UserDto>();
         }

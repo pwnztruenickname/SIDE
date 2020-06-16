@@ -13,6 +13,7 @@ namespace SIDE.Configure
             builder.Property(x => x.Id);
             builder.Property(x => x.CharacterId).HasComment("Идентификатор персонажа");
             builder.Property(x => x.ClassId).HasComment("Идентификатор класса");
+            builder.Property(x => x.Level).HasComment("Уровень прокаченности класса у персонажа");
 
             builder
                 .HasOne(x => x.Character)
