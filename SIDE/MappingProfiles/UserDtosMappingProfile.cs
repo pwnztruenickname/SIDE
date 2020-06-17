@@ -1,8 +1,8 @@
 ﻿using AutoMapper;
-using SIDE.Dto.Users;
-using SIDE.Model;
+using SIDE.Dtos.Users;
+using SIDE.Models;
 
-namespace SIDE.MappingProfile
+namespace SIDE.MappingProfiles
 {
     public class UserDtosMappingProfile : Profile
     {

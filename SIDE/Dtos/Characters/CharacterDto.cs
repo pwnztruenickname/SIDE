@@ -1,4 +1,4 @@
-﻿namespace SIDE.Dto.Characters
+﻿namespace SIDE.Dtos.Characters
 {
     public class CharacterDto
     {

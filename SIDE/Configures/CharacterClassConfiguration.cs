@@ -1,11 +1,17 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
-using SIDE.Model;
+using SIDE.Models;
 
-namespace SIDE.Configure
+namespace SIDE.Configures
 {
+    /// <summary>
+    /// Конфигурация для промужеточной таблицы между  <see cref="Character"/> и <see cref="Class"/>
+    /// </summary>
     public class CharacterClassConfiguration : IEntityTypeConfiguration<CharacterClass>
     {
+        /// <summary>
+        /// Конфигурация для промужеточной таблицы между  <see cref="Character"/> и <see cref="Class"/>
+        /// </summary>
         public void Configure(EntityTypeBuilder<CharacterClass> builder)
         {
             builder.ToTable("character_classes");
@@ -25,7 +31,7 @@ namespace SIDE.Configure
                 .HasOne(x => x.Class)
                 .WithMany()
                 .OnDelete(DeleteBehavior.Restrict)
-                .HasForeignKey(x => x.CharacterId);
+                .HasForeignKey(x => x.ClassId);
 
             builder.HasIndex(x => new {x.CharacterId, x.ClassId}).IsUnique();
         }

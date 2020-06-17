@@ -1,14 +1,17 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
-using SIDE.Model;
+using SIDE.Models;
 
-namespace SIDE.Configure
+namespace SIDE.Configures
 {
     /// <summary>
     /// Конфигурация для сущности <see cref="User"/>
     /// </summary>
     public class UserConfiguration : IEntityTypeConfiguration<User>
     {
+        /// <summary>
+        /// Конфигурация для сущности <see cref="User"/>
+        /// </summary>
         public void Configure(EntityTypeBuilder<User> builder)
         {
             builder.ToTable("users");

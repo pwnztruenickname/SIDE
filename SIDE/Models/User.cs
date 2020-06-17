@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace SIDE.Model
+namespace SIDE.Models
 {
     /// <summary>
     /// Пользователь

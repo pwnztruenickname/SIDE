@@ -4,9 +4,9 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using SIDE.Configure;
+using SIDE.Configures;
 using SIDE.Extensions;
-using SIDE.Service.user;
+using SIDE.Services.user;
 
 namespace SIDE
 {

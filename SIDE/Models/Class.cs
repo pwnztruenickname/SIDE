@@ -1,6 +1,6 @@
 ﻿using AutoMapper.Configuration;
 
-namespace SIDE.Model
+namespace SIDE.Models
 {
     /// <summary>
     /// Класс персонажал

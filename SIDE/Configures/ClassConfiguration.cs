@@ -1,8 +1,8 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
-using SIDE.Model;
+using SIDE.Models;
 
-namespace SIDE.Configure
+namespace SIDE.Configures
 {
     /// <summary>
     /// Конфигурация для <see cref="Class"/>

@@ -3,11 +3,10 @@ using System.Threading.Tasks;
 using AutoMapper;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using SIDE.Dto.Characters;
-using SIDE.Dto.Users;
-using SIDE.Service.user;
+using SIDE.Dtos.Characters;
+using SIDE.Services.user;
 
-namespace SIDE.Controller
+namespace SIDE.Controllers
 {
     [ApiController]
     [Route("api/auth")]

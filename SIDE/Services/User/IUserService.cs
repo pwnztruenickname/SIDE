@@ -1,8 +1,8 @@
 ﻿using System.Collections.Generic;
 using System.Threading.Tasks;
-using SIDE.Model;
+using SIDE.Models;
 
-namespace SIDE.Service.user
+namespace SIDE.Services.user
 {
     public interface IUserService
     {

@@ -1,5 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using SIDE.Model;
+using SIDE.Models;
 
 namespace SIDE
 {

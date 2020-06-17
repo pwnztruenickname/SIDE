@@ -1,4 +1,4 @@
-﻿namespace SIDE.Dto.Users
+﻿namespace SIDE.Dtos.Users
 {
 
     /// <summary>

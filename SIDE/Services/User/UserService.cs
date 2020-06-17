@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
-using SIDE.Model;
+using SIDE.Models;
 
-namespace SIDE.Service.user
+namespace SIDE.Services.user
 {
     public class UserService : IUserService
     {
