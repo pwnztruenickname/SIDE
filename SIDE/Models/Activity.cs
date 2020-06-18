@@ -37,8 +37,11 @@ namespace SIDE.Models
         /// <summary>
         /// Организатор мероприятия
         /// </summary>
-        public Character Organiser { get; set; }
+        public User Organiser { get; set; }
 
+        /// <summary>
+        /// Идентификатор организатора мероприятия
+        /// </summary>
         public long? OrganiserId { get; set; }
 
         /// <summary>

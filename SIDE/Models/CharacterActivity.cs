@@ -1,4 +1,6 @@
-﻿namespace SIDE.Models
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace SIDE.Models
 {
     /// <summary>
     /// Промежуточная таблица для сущностей <see cref="Character"/> и <see cref="Activity"/>
